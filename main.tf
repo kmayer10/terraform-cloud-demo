@@ -118,3 +118,10 @@ resource "null_resource" "copy_html" {
     destination = "/tmp/index.html"
   }
 }
+
+
+
+output "public_ip" {
+  value = aws_instance.ec2_ubuntu_multiple.*.public_ip
+}
+
